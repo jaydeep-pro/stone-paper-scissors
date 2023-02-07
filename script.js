@@ -2,9 +2,9 @@ let currScore = 0;
 let compScore = 0;
 
 function getComputerChoice() {
-  let randi = Math.floor(Math.random() * 3);
-  const randRps = document.querySelectorAll('.rpsButton');
-  return randRps[randi].value;
+  let nums = Math.floor(Math.random() * 3);
+  const numRps = document.querySelectorAll('.rpsButton');
+  return numRps[nums].value;
 }
 
 // ** getResult compares playerChoice & computerChoice and returns the score accordingly **
@@ -20,8 +20,8 @@ function getResult(playerChoice, computerChoice) {
 
   // All situations where human wins, set `score` to 1
   // make sure to use else ifs here
-  else if (playerChoice == 'Rock' && computerChoice == 'Scissors') score = 1;
-  else if (playerChoice == 'Paper' && computerChoice == 'Rock') score = 1;
+  else if (playerChoice == 'Stone' && computerChoice == 'Scissors') score = 1;
+  else if (playerChoice == 'Paper' && computerChoice == 'Stone') score = 1;
   else if (playerChoice == 'Scissors' && computerChoice == 'Paper') score = 1;
 
   // Otherwise human loses (aka set score to -1)
